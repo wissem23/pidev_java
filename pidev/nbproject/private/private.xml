@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/entities/Reservation.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/services/ServiceReservation.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/tests/MainClass.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/NewFXMain.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/Page1Controller.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/utils/DataSource.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/Page1.fxml</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/fxml.css</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/services/ServiceSeance.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/Page2Controller.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/services/IService.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/entities/Seance.java</file>
+            <file>file:/C:/Users/wisse/Documents/NetBeansProjects/pidev/src/wissem/gui/Page2.fxml</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,11 @@
+.pane {
+    -fx-background-color: white;
+}
+
+#AjouterReservationButton {
+    -fx-background-color: #ff0000;
+}
+
+#AjouterReservationButton:hover {
+    -fx-background-color: #cc0000;
+}
