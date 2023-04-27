@@ -17,6 +17,7 @@ private Integer id, isverified;
         this.isverified = isverified;
     }
 
+
     public Integer getId() {
         return id;
     }
