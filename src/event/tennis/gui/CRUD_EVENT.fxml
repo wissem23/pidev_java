@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="lst" prefHeight="556.0" prefWidth="1128.0" styleClass="main-top-form" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.tennis.gui.CRUD_EVENTController">
+   <children>
+      <AnchorPane layoutX="245.0" layoutY="45.0" prefHeight="506.0" prefWidth="332.0" stylesheets="@newStyleSheet.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <VBox layoutX="6.0" layoutY="18.0" prefHeight="361.0" prefWidth="322.0" styleClass="white-bg" stylesheets="@../../../../../Desktop/esprit%20s1/PItennis/src/event/tennis/ressource/styles.css" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="18.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+                  <ComboBox fx:id="tType" prefHeight="33.0" prefWidth="322.0" styleClass="combo-box" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                  <TextField fx:id="tDescription" prefHeight="34.0" prefWidth="322.0" styleClass="textfield" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date_Debut" />
+                  <DatePicker fx:id="tDate_Debut" prefHeight="35.0" prefWidth="322.0" styleClass="textfield" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date_Fin" />
+                  <DatePicker fx:id="tDate_Fin" prefHeight="34.0" prefWidth="322.0" styleClass="textfield" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Image" />
+                  <Button fx:id="tImage" mnemonicParsing="false" onAction="#AddImage" prefHeight="26.0" prefWidth="336.0" text="Choisir Image" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Like" />
+                  <TextField fx:id="tLike" prefHeight="30.0" prefWidth="322.0" styleClass="textfield" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TotaleLike" />
+                  <TextField fx:id="tTotaleLike" prefHeight="30.0" prefWidth="322.0" styleClass="textfield" />
+               </children>
+            </VBox>
+            <Button fx:id="btnView" layoutX="190.0" layoutY="457.0" mnemonicParsing="false" onAction="#afficherEvenement" prefHeight="26.0" prefWidth="111.0" styleClass="add-btn" text="👁‍🗨View" />
+            <Button fx:id="btnADD" layoutX="30.0" layoutY="411.0" minWidth="64.0" mnemonicParsing="false" onAction="#ajouterEvenement" prefHeight="26.0" prefWidth="111.0" styleClass="add-btn" text="✔ ADD" />
+            <Button fx:id="btnDelete" layoutX="30.0" layoutY="457.0" mnemonicParsing="false" onAction="#supprimerEvenement" prefHeight="26.0" prefWidth="111.0" styleClass="add-btn" text="❌Delete" />
+            <Button fx:id="btnUpdate" layoutX="190.0" layoutY="411.0" minWidth="58.0" mnemonicParsing="false" onAction="#modifierEvenement" prefHeight="26.0" prefWidth="111.0" styleClass="add-btn" text="🔄Update" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="594.0" layoutY="42.0" prefHeight="506.0" prefWidth="550.0" stylesheets="@newStyleSheet.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <ListView fx:id="v_event" layoutX="6.0" layoutY="49.0" prefHeight="435.0" prefWidth="538.0" styleClass="table-view" />
+            <TextField fx:id="tRecherche" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="273.0" promptText="Recherche" styleClass="search" />
+            <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="20.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/00.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="rech" layoutX="297.0" layoutY="15.0" mnemonicParsing="false" onAction="#recherche" styleClass="update-btn" text="OK" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.0" prefHeight="36.0" prefWidth="1155.0" styleClass="white-bg" stylesheets="@newStyleSheet.css">
+         <children>
+            <AnchorPane layoutY="-86.0" prefHeight="40.0" prefWidth="1155.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="53.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressource/cc.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#7aa600" layoutX="44.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tennis_Mate" wrappingWidth="104.02011108398438">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="41.0" prefHeight="515.0" prefWidth="217.0">
+         <children>
+            <AnchorPane layoutX="9.0" layoutY="38.0" prefHeight="515.2" prefWidth="217.6" styleClass="nav-form" stylesheets="@newStyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="208.0" layoutX="1.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressource/cc.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="65.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="104.02011108398438">
+                     <font>
+                        <Font name="Tahoma" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="44.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tennis_Mate">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="dashBtn" layoutX="16.0" layoutY="258.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="         📊   Dashboard">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Line endX="100.0" layoutX="109.0" layoutY="232.0" startX="-100.0" />
+                  <Button fx:id="eventBtn" layoutX="16.0" layoutY="293.0" mnemonicParsing="false" onAction="#evenment" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="         🗓 Evenements" />
+                  <Button fx:id="PartBtn" layoutX="16.0" layoutY="328.0" mnemonicParsing="false" onAction="#participation" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="        👨‍👧‍👦 Participants" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../Desktop/pidev_java/PItennis/src/event/tennis/ressource/styles.css" />
+      <URL value="@newStyleSheet.css" />
+   </stylesheets>
+</AnchorPane>

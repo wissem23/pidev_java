@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.tennis.gui.EventsController">
+   <children>
+      <ImageView fx:id="img" fitHeight="250.0" fitWidth="433.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox prefHeight="250.0" prefWidth="433.0" styleClass="gradient">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="250.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="type" alignment="CENTER" prefHeight="53.0" prefWidth="158.0" text="Tournois">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="date" alignment="CENTER" prefHeight="24.0" prefWidth="128.0" text="Date">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="totale" alignment="CENTER" layoutX="10.0" layoutY="187.0" prefHeight="5.0" prefWidth="150.0" text="TLike">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

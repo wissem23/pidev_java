@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" styleClass="post-background" stylesheets="@newStyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.tennis.gui.LIKEController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" styleClass="reaction" stylesheets="@newStyleSheet.css">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressource/cc.png" />
+               </image></ImageView>
+            <VBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="392.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="Evenement" textFill="#c4f742">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="20.0" right="20.0" />
+         </opaqueInsets>
+      </HBox>
+      <Label fx:id="types" maxWidth="1.7976931348623157E308" text="Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </Label>
+      <ImageView fx:id="images" fitHeight="214.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true" />
+      <StackPane prefHeight="74.0" prefWidth="566.0">
+         <children>
+            <HBox prefHeight="68.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="200.0" spacing="15.0" styleClass="reaction" stylesheets="@newStyleSheet.css">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="172.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="36.0" styleClass="clear-btn" stylesheets="@newStyleSheet.css" text="❤" />
+                        <Button layoutX="10.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="35.0" styleClass="add-btn" stylesheets="@newStyleSheet.css" text="👍" />
+                        <Button layoutX="34.0" layoutY="29.0" lineSpacing="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="add-btn" stylesheets="@newStyleSheet.css" text="👎" />
+                        <Label fx:id="totalelike" lineSpacing="3.0" text="totalike" />
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="73.0" prefWidth="43.0" />
+                  <Button fx:id="particip" mnemonicParsing="false" onAction="#participate" prefWidth="81.0" styleClass="add-btn" stylesheets="@newStyleSheet.css" text="Participer" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="lst" prefHeight="556.0" prefWidth="1128.0" styleClass="main-top-form" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.tennis.gui.CRUD_PARTICIPATIONController">
+   <children>
+      <AnchorPane layoutX="579.0" layoutY="46.0" prefHeight="500.0" prefWidth="564.0" stylesheets="@newStyleSheet.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TextField fx:id="tRecherche" layoutX="20.0" layoutY="14.0" prefHeight="27.0" prefWidth="291.0" promptText="🔎Recherche" styleClass="search" />
+            <ListView fx:id="v_participation" layoutX="18.0" layoutY="53.0" prefHeight="430.0" prefWidth="532.0" styleClass="table-view" />
+            <Button fx:id="reche" layoutX="326.0" layoutY="15.0" mnemonicParsing="false" onAction="#rechercher" styleClass="update-btn" stylesheets="@newStyleSheet.css" text="OK" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" prefHeight="40.0" prefWidth="1144.0" styleClass="white-bg" stylesheets="@newStyleSheet.css">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="53.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressource/cc.png" />
+               </image>
+            </ImageView>
+            <Text fill="#8ebc11" layoutX="44.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tennis_Mate" wrappingWidth="104.02011108398438">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="243.0" layoutY="46.0" prefHeight="500.0" prefWidth="322.0" stylesheets="@newStyleSheet.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <VBox layoutX="10.0" layoutY="18.0" prefHeight="208.0" prefWidth="291.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Code_Ticket" wrappingWidth="83.7366943359375">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tCode" prefHeight="35.0" prefWidth="222.0" styleClass="textfield" stylesheets="@newStyleSheet.css" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID_Utilisateur">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="roll_user" prefHeight="27.0" prefWidth="290.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID_Evenement">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="roll_event" prefHeight="27.0" prefWidth="298.0" />
+               </children>
+            </VBox>
+            <Button fx:id="btnView" layoutX="174.0" layoutY="293.0" mnemonicParsing="false" onAction="#afficherParticipation" prefHeight="34.0" prefWidth="120.0" styleClass="add-btn" text="👁‍🗨View" />
+            <Button fx:id="btnDelete" layoutX="174.0" layoutY="240.0" mnemonicParsing="false" onAction="#supprimerParticipation" prefHeight="34.0" prefWidth="120.0" styleClass="add-btn" text="❌Delete" />
+          <Button fx:id="btnADD" layoutX="37.0" layoutY="240.0" mnemonicParsing="false" onAction="#ajouterParticipation" prefHeight="34.0" prefWidth="120.0" styleClass="add-btn" text="✔ ADD" />
+            <Button fx:id="btnUpdate" layoutX="37.0" layoutY="293.0" mnemonicParsing="false" onAction="#modifierParticipation" prefHeight="34.0" prefWidth="120.0" styleClass="add-btn" text="🔄Update" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="40.0" prefHeight="516.0" prefWidth="226.0" styleClass="nav-form" stylesheets="@newStyleSheet.css">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="208.0" layoutX="1.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressource/cc.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="65.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="104.02011108398438">
+               <font>
+                  <Font name="Tahoma" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tennis_Mate">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="PartBtn" layoutX="16.0" layoutY="258.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="         📊   Dashboard">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Line endX="100.0" layoutX="113.0" layoutY="231.0" startX="-100.0" />
+            <Button fx:id="EventBtn" layoutX="16.0" layoutY="293.0" mnemonicParsing="false" onAction="#evenement" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="         🗓 Evenements" />
+            <Button fx:id="partBtn" layoutX="16.0" layoutY="328.0" mnemonicParsing="false" onAction="#partixipation" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" text="        👨‍👧‍👦 Participants" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../Desktop/pidev_java/PItennis/src/event/tennis/ressource/styles.css" />
+      <URL value="@newStyleSheet.css" />
+   </stylesheets>
+</AnchorPane>
