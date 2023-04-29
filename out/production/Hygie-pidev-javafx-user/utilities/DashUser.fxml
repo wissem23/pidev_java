@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utilities.UserController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="602.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="imageViewUser" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/téléchargement_cc-removebg-previewccccc.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                    </VBox.margin></ImageView>
+                <Label fx:id="titleusername" textFill="#e7e5e5">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Overview" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Home_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnUsers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Offres">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Open_Envelope_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnProfile" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Profile">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Person_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Réclamation">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnDataAnalysis" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Data Analysis">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/istockphoto-1249867007-612x612-removebg-preview.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Settings">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Slider__32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#signoutBtnOnAction" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Sign_Out_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="258.0" prefHeight="602.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+            <children>
+                <Pane fx:id="pnlProfile" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="40.0" layoutY="17.0" text="Profile" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Line endX="620.1378173828125" endY="-7.62939453125E-6" layoutX="130.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
+                        <ImageView fitHeight="40.0" fitWidth="49.0" layoutX="712.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/vector-setting-icon-png_309695-removebg-preview.png" />
+                            </image>
+                        </ImageView>
+                        <AnchorPane fx:id="paneProfile" layoutX="14.0" layoutY="110.0" prefHeight="480.0" prefWidth="764.0" visible="false">
+                            <children>
+                                <ImageView fx:id="imageView" fitHeight="82.0" fitWidth="200.0" layoutX="325.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/téléchargement_cc-removebg-previewccccc.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="clearBtn" layoutX="196.0" layoutY="425.0" mnemonicParsing="false" onAction="#clear" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: #be0206; -fx-background-radius: 20;" text="Clear" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <TextField fx:id="addressTextField" alignment="CENTER" layoutX="196.0" layoutY="215.0" prefHeight="26.0" prefWidth="340.0" promptText="Address" style="-fx-background-radius: 20;" />
+                                <Label layoutX="33.0" layoutY="218.0" text="Address :" textFill="#fcfcfc">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="35.0" layoutY="127.0" text="FullName :" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="35.0" layoutY="170.0" text="Email :" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="35.0" layoutY="268.0" text="Carte d'identité :" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="fullNameTextField" alignment="CENTER" layoutX="196.0" layoutY="111.0" prefHeight="26.0" prefWidth="340.0" promptText="FullName" style="-fx-background-radius: 20;" />
+                                <TextField fx:id="emailTextField" alignment="CENTER" layoutX="194.0" layoutY="167.0" prefHeight="26.0" prefWidth="340.0" promptText="Email" style="-fx-background-radius: 20;" />
+                                <TextField fx:id="cinTextField" alignment="CENTER" layoutX="196.0" layoutY="264.0" prefHeight="26.0" prefWidth="340.0" promptText="Carte d'identité" style="-fx-background-radius: 20;" />
+                                <Button fx:id="saveBtn" layoutX="416.0" layoutY="425.0" mnemonicParsing="false" onAction="#userUpdateBtn" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Label layoutX="40.0" layoutY="336.0" text="Image :" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="33.0" layoutY="57.0" text="Description" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="descriptionTextArea" alignment="CENTER" layoutX="194.0" layoutY="46.0" prefHeight="40.0" prefWidth="340.0" promptText="Description" style="-fx-background-radius: 20;" />
+                                <Button fx:id="InsertImage" layoutX="373.0" layoutY="374.0" minWidth="47.0" mnemonicParsing="false" onAction="#updateProfileImage" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 20; -fx-background-color: #1769bc;" textFill="#f5f5f5" />
+                                <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="394.0" layoutY="394.0" wrappingWidth="24.14794921875" />
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="changerRolesBtn" layoutX="628.0" layoutY="62.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="29.0" prefWidth="111.0" style="-fx-background-color: #1769bc; -fx-background-radius: 20;" text="Changer Roles" textFill="WHITE" />
+                        <AnchorPane fx:id="paneChangerRoles" layoutX="14.0" layoutY="110.0" prefHeight="480.0" prefWidth="764.0" visible="false">
+                            <children>
+                                <Label layoutX="46.0" layoutY="76.0" text="Spécialité :" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="46.0" layoutY="146.0" text="Votre CV :" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="specialiteList" layoutX="218.0" layoutY="74.0" onAction="#userspecialiteList" prefHeight="26.0" prefWidth="217.0" promptText="choose..." />
+                                <ImageView fx:id="cvView" fitHeight="160.0" fitWidth="182.0" layoutX="242.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/Exemple-CV-Moderne-Bleu-clair.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="clearBtnn" layoutX="161.0" layoutY="324.0" mnemonicParsing="false" onAction="#clearRole" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Clear" textFill="WHITE" />
+                                <Button layoutX="356.0" layoutY="324.0" mnemonicParsing="false" onAction="#updateRoleUser" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Send" textFill="WHITE" />
+                                <Label layoutX="31.0" layoutY="438.0" text=" Votre changement de poste prend 2 jours maximum pour plus d'informations contactez-nous." textFill="WHITE">
+                                    <font>
+                                        <Font name="Bangla MN" size="10.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="369.0" layoutY="202.0" mnemonicParsing="false" onAction="#updateProfileCv" prefHeight="31.0" prefWidth="61.0" style="-fx-background-radius: 20; -fx-background-color: #358dcc;" />
+                                <FontAwesomeIcon fill="WHITE" glyphName="UPLOAD" layoutX="393.0" layoutY="222.0" />
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="changerPassword" layoutX="494.0" layoutY="62.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="29.0" prefWidth="127.0" style="-fx-background-color: #358dcc; -fx-background-radius: 20;" text="Changer Password" textFill="WHITE" />
+                        <Button fx:id="editProfile" layoutX="390.0" layoutY="63.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="29.0" prefWidth="96.0" style="-fx-background-color: #639be4; -fx-background-radius: 20;" text="Edit Profil" textFill="WHITE" />
+                        <AnchorPane fx:id="edit_form" layoutX="14.0" layoutY="110.0" prefHeight="480.0" prefWidth="764.0">
+                            <children>
+                                <Label layoutX="32.0" layoutY="232.0" text="Carte d'identité :" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="30.0" layoutY="283.0" text="Address :" textFill="#fcfcfc">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="32.0" layoutY="184.0" text="FullName :" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="32.0" layoutY="336.0" text="Email :" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="imageViewUser2" fitHeight="106.0" fitWidth="128.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/téléchargement_cc-removebg-previewccccc.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="fullnamelabel" contentDisplay="CENTER" layoutX="248.0" layoutY="183.0" prefHeight="17.0" prefWidth="183.0" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="cinlabel" contentDisplay="CENTER" layoutX="248.0" layoutY="233.0" prefHeight="17.0" prefWidth="183.0" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="addressLabel" contentDisplay="CENTER" layoutX="248.0" layoutY="282.0" prefHeight="17.0" prefWidth="183.0" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="emaillabel" contentDisplay="CENTER" layoutX="248.0" layoutY="335.0" prefHeight="17.0" prefWidth="183.0" textFill="#fffafa">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="79.0" layoutY="104.0" minWidth="47.0" mnemonicParsing="false" onAction="#updateProfileImage" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 20; -fx-background-color: #1769bc;" />
+                                <FontAwesomeIcon glyphName="EDIT" layoutX="100.0" layoutY="125.0" wrappingWidth="11.248275964599543" AnchorPane.rightAnchor="652.7517240354005" />
+                                <Label layoutX="392.0" layoutY="18.0" text="Description personnelle " textFill="WHITE">
+                                    <font>
+                                        <Font name="Ayuthaya" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Line endX="109.4337158203125" layoutX="479.0" layoutY="47.0" startX="-100.0" stroke="WHITE" />
+                                <AnchorPane layoutX="268.0" layoutY="60.0" prefHeight="67.0" prefWidth="464.0" style="-fx-border-color: white;">
+                                    <children>
+                                        <Label fx:id="descriptionLabel" alignment="CENTER" layoutX="6.0" layoutY="3.0" prefHeight="59.0" prefWidth="453.0" textFill="#fffefe" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="verifiedPane" layoutX="17.0" layoutY="403.0" prefHeight="43.0" prefWidth="495.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="8.0" prefHeight="28.0" prefWidth="401.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Votre compte n'est pas vérifié, veuillez vérifier votre compte. Cliquez ici." textFill="WHITE" />
+                                        <Button fx:id="verifyBtn" layoutX="432.0" layoutY="9.0" mnemonicParsing="false" onAction="#verify" style="-fx-background-color: #1508c9; -fx-background-radius: 20;" text="Vérifier" textFill="WHITE" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panePassword" layoutX="14.0" layoutY="110.0" prefHeight="480.0" prefWidth="764.0" visible="false">
+                            <children>
+                                <Label layoutX="44.0" layoutY="93.0" text="Nouveau Mot de passe :" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="clearBtnn1" layoutX="259.0" layoutY="273.0" mnemonicParsing="false" onAction="#clearPassword" prefHeight="29.0" prefWidth="96.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Clear" textFill="WHITE" />
+                                <Button fx:id="savePassword" layoutX="419.0" layoutY="273.0" mnemonicParsing="false" onAction="#updateUserPassword" prefHeight="29.0" prefWidth="96.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Save" textFill="WHITE" />
+                                <Label layoutX="46.0" layoutY="172.0" text="Confirmer mot de passe" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="newpasswordtextFielduser" alignment="CENTER" layoutX="264.0" layoutY="90.0" prefHeight="26.0" prefWidth="245.0" promptText="New mdp" style="-fx-background-radius: 20;" />
+                                <PasswordField fx:id="ConfirmerPasswordTextField" alignment="CENTER" layoutX="259.0" layoutY="169.0" prefHeight="26.0" prefWidth="256.0" promptText="Confimer mdp" style="-fx-background-radius: 20;" />
+                            </children>
+                        </AnchorPane>
+                    </children></Pane>
+                <Pane fx:id="pnlOverview" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" visible="false">
+                    <children>
+                        <Label layoutX="26.0" layoutY="18.0" text="Overview" textFill="#f8f8f8">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Line endX="627.0" layoutX="125.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
+                        <TextField alignment="CENTER" layoutX="596.0" layoutY="26.0" prefHeight="27.0" prefWidth="183.0" promptText="Search..." style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="752.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Search_52px.png" />
+                            </image>
+                        </ImageView>
+                        <AnchorPane layoutX="34.0" layoutY="137.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #99d70a; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Total Users">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalUsers" layoutX="6.0" layoutY="57.0" />
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="143.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/téléchargement__2_-removebg-preview.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="34.0" layoutY="290.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 20;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Compte isVerified">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalIsVeri" layoutX="6.0" layoutY="57.0" />
+                                <ImageView fitHeight="62.0" fitWidth="59.0" layoutX="143.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/150-1503998_ilf-confirmed-user-hd-png-download-removebg-preview.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="263.0" layoutY="137.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #e7ee0d; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Total Coach">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalCoach" layoutX="6.0" layoutY="57.0" />
+                                <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="143.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/2013731.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="263.0" layoutY="290.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: red; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Compte Blocked">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="6.0" layoutY="57.0" text="1" />
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="143.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/téléchargement__1_-removebg-preview.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="492.0" layoutY="137.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #e18701; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Total Simple User">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalSimpleUser" layoutX="6.0" layoutY="57.0" />
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="143.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/New_user_icon-01.svg.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="492.0" layoutY="290.0" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: blue; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <children>
+                                <Label layoutX="6.0" layoutY="27.0" text="Total Réclamation">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="6.0" layoutY="57.0" text="7" />
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="143.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/claim-icon-vector-sign-symbol-isolated-white-background-claim-icon-vector-isolated-white-background-your-web-133738014-removebg-preview.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children></Pane>
+                <Pane fx:id="pnlUsers" prefHeight="609.0" prefWidth="743.0" visible="false">
+                    <children>
+                        <TextField layoutX="596.0" layoutY="26.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label layoutX="26.0" layoutY="18.0" text="Users Lists" textFill="#e7e5e5">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <ScrollPane layoutX="14.0" layoutY="229.0" prefHeight="359.0" prefWidth="746.0" stylesheets="@style.css">
+
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/icons8_Search_52px.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="fullName" alignment="CENTER" layoutX="11.0" layoutY="114.0" prefHeight="26.0" prefWidth="140.0" promptText="fullname" />
+                        <TextField fx:id="email" alignment="CENTER" layoutX="11.0" layoutY="182.0" prefHeight="26.0" prefWidth="140.0" promptText="E-mail" />
+                        <TextField fx:id="cin" alignment="CENTER" layoutX="200.0" layoutY="114.0" prefHeight="26.0" prefWidth="140.0" promptText="CIN" />
+                        <TextField fx:id="address" alignment="CENTER" layoutX="200.0" layoutY="182.0" prefHeight="26.0" prefWidth="140.0" promptText="Address" />
+                        <Label layoutX="30.0" layoutY="85.0" prefHeight="17.0" prefWidth="67.0" text="Fullname" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="156.0" prefHeight="17.0" prefWidth="118.0" text="Email" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="226.0" layoutY="85.0" text="CIN" textFill="#f8f5f5">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="232.0" layoutY="156.0" text="Address" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="397.0" layoutY="85.0" text="Roles" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="404.0" layoutY="156.0" text="IsVerified" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="roles" layoutX="387.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="140.0" promptText="Choose..." />
+                        <ComboBox fx:id="isverified" layoutX="387.0" layoutY="182.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="140.0" promptText="Choose..." />
+                        <Line endX="30.5" layoutX="115.0" layoutY="54.0" startX="-100.0" stroke="WHITE" />
+                    </children>
+                </Pane>
+
+            </children>
+        </StackPane>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>

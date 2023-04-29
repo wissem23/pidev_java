@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kernel-7.1.3-sources">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/kernel-7.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
