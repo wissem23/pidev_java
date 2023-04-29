@@ -1,0 +1,64 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package wissem.services;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.List;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+
+import wissem.entities.Seance;
+
+
+/**
+ *
+ * @author wisse
+ */
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.List;
+
+public class PDFGenerator {
+
+    public static void generateSeancesPDF(List<Seance> seances) throws FileNotFoundException, DocumentException {
+        Document document = new Document(PageSize.A4, 50, 50, 50, 50);
+        PdfWriter.getInstance(document, new FileOutputStream("C:\\Users\\wisse\\Desktop\\testpdf\\listaa2.pdf"));
+        document.open();
+        Font font = FontFactory.getFont(FontFactory.COURIER, 16, Font.BOLD);
+        Paragraph para = new Paragraph("Liste des seances", font);
+        para.setAlignment(Paragraph.ALIGN_CENTER);
+        document.add(para);
+        document.add(new Paragraph("\n"));
+        font = FontFactory.getFont(FontFactory.COURIER, 12, Font.NORMAL);
+
+        for (Seance a : seances) {
+            document.add(new Paragraph("Date: " + a.getDate(), font));
+            document.add(new Paragraph("Adresse: " + a.getAdresse(), font));
+            document.add(new Paragraph("Duration: " + a.getDuration(), font));
+            document.add(new Paragraph("Members: " + a.getPeopleNbre(), font));
+            document.add(new Paragraph("Coach Name: " + a.getCoachName(), font));
+            document.add(new Paragraph("Level: " + a.getLevel(), font));
+            document.add(new Paragraph("Price: " + a.getPrice() + " Dinars", font));
+            document.add(new Paragraph("----------------------------------------------------------- "));
+            document.add(new Paragraph("\n"));
+        }
+        document.close();
+    }
+
+}
